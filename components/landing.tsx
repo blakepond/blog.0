@@ -6,65 +6,91 @@ import Link from "next/link"
 import { CardHeader, CardContent, Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
-export function landing() {
-  return (
-    <div className="font-mono text-black bg-gray-200 min-h-screen">
-      <header className="flex items-center justify-between p-6 bg-white border-2 border-black shadow-md">
-        <h1 className="text-3xl font-bold">My Blog</h1>
-        <nav>
-          <ul className="flex space-x-4">
-            <li>
-              <Link className="text-black hover:text-gray-700" href="#">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className="text-black hover:text-gray-700" href="#">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link className="text-black hover:text-gray-700" href="#">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 p-6">
-        <section className="md:w-full">
-          <div className="mb-6 border-2 border-black shadow-md">
-            <Card>
-              <CardHeader>
-                <h2 className="text-2xl font-bold">Welcome to My Blog!</h2>
-                <p className="text-black">A place to share my thoughts and ideas.</p>
-              </CardHeader>
-              <CardContent>
-                <img
-                  alt="Landing image"
-                  className="w-full h-auto"
-                  height="400"
-                  src="/placeholder.svg"
-                  style={{
-                    aspectRatio: "600/400",
-                    objectFit: "cover",
-                  }}
-                  width="600"
-                />
-                <p className="mt-4">
-                  Explore my latest posts, learn more about me, or get in touch. I'm glad you're here.
-                </p>
-                <Button className="bg-gray-300 hover:bg-gray-400 mt-4">
-                  <Link href="#">Read Latest Post</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-      </main>
-      <footer className="p-6 bg-white border-2 border-black mt-6">
-        <p className="text-center text-black">© 2023 My Blog</p>
-      </footer>
-    </div>
-  )
+export function Landing() {
+   return (
+      <div className=" text-black bg-gray-200 min-h-screen">
+         <header className="flex items-center justify-between p-6 bg-white border-2 border-black shadow-md">
+            <h1 className="text-3xl font-bold">The Journey Begins</h1>
+            <nav>
+               <ul className="flex space-x-4">
+                  <li>
+                     <Link className="text-black hover:text-gray-700" href="#">
+                        Home
+                     </Link>
+                  </li>
+                  <li>
+                     <Link className="text-black hover:text-gray-700" href="#">
+                        About
+                     </Link>
+                  </li>
+                  <li>
+                     <Link
+                        className="text-black hover:text-gray-700"
+                        href="/contact"
+                     >
+                        <a href="/contact">Contact</a>
+                     </Link>
+                  </li>
+               </ul>
+            </nav>
+         </header>
+         <main className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 p-6">
+            <section className="md:w-full">
+               <div className="mb-6 border-2 border-black shadow-md">
+                  <Card>
+                     <CardHeader>
+                        <h2 className="text-2xl font-bold">Welcome</h2>
+                        <div>
+                           <p className="text-black mt-4 mb-4">
+                              My name is Blake Houston Pond, born the morning of
+                              November 26th, 1991, at 8:25 AM in Idaho Falls,
+                              Idaho. As the youngest of five siblings, with
+                              three older brothers and an older sister, my
+                              life's journey has been anything but ordinary.
+                           </p>
+                           <p className="text-black mt-4 mb-4">
+                              My family story is one of contrasts – deep-seated
+                              love intertwined with challenging dynamics. It's a
+                              narrative not solely defined by my feelings, but
+                              significantly influenced by our interactions and
+                              mutual understanding, or at times, the lack
+                              thereof.
+                           </p>{" "}
+                           <p className="text-black mt-4 mb-4">
+                              This blog is a window into my world, a space where
+                              I'll share the nuances of navigating family
+                              complexities and personal evolution. It's more
+                              than just recounting events; it's an exploration
+                              of the emotions and experiences that have shaped
+                              me.{" "}
+                           </p>{" "}
+                           <p className="text-black mt-4 mb-4 ">
+                              {" "}
+                              I invite you to join me on this journey, not just
+                              as a reader, but as a fellow traveler in the
+                              intricate path of life. Together, we'll delve into
+                              these layers, uncovering and understanding the
+                              realities that we often quietly carry with us.{" "}
+                           </p>{" "}
+                           <p className="text-black mt-4 ">
+                              So, I welcome you to take this journey with me, as
+                              I revisit the roots of my story in Idaho Falls,
+                              and beyond.
+                           </p>
+                        </div>
+                     </CardHeader>
+                     <CardContent>
+                        <Button className="bg-gray-300 hover:bg-gray-400 mt-4">
+                           <Link href="#">Read Latest Post</Link>
+                        </Button>
+                     </CardContent>
+                  </Card>
+               </div>
+            </section>
+         </main>
+         <footer className="p-6 bg-white border-2 border-black mt-6">
+            <p className="text-center text-black">© 2023 The Journey Begins</p>
+         </footer>
+      </div>
+   );
 }
